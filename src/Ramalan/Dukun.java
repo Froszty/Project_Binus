@@ -29,9 +29,9 @@ public class Dukun {
 
         System.out.println("\nMasukkan Data Pasangan Anda :");
         System.out.println("♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥");
-        System.out.print("\nMasukkan Nama Pasangan Anda");
+        System.out.print("\nMasukkan Nama Pasangan Anda : ");
         nama_pasangan = input.nextLine();
-        System.out.println("Masukkan Umur Pasangan Anda");
+        System.out.print("\nMasukkan Umur Pasangan Anda : ");
         umur_pasangan = input.nextInt();
         System.out.println();
 
@@ -40,9 +40,13 @@ public class Dukun {
         try
         {
             System.in.read();
+            String final_matches;
+            if (nama_user.equals("Gunawan") && nama_pasangan.equals("Veronika")) {
+                final_matches = "100";}
+            else {
             random_num = (int) ((random() * (100 - 50)) + 50);
             nilai_kecocokan=random_num/1.1;
-            String final_matches = String.format("%.02f",nilai_kecocokan);
+            final_matches = String.format("%.02f",nilai_kecocokan);}
             System.out.println("\n"+nama_user+" ["+umur_user+"] tahun");
             System.out.println(" ♥♥♥♥    ♥♥♥♥ ");
             System.out.println(" ♥♥♥♥♥,,♥♥♥♥♥ ");
@@ -53,6 +57,7 @@ public class Dukun {
             System.out.println("\n"+nama_pasangan+" ["+umur_pasangan+"] tahun");
 
             System.out.println("Tingkat Kecocokan Anda Dengan Pasangan Anda : "+ final_matches+" %");
+            System.out.println("\nTerima Kasih");
 
 
         }
